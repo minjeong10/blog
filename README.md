@@ -1,2 +1,2 @@
 # blog
-김민정 블로그
+https://minjeong10.github.io/blog/ 
