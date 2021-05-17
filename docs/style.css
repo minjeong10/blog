@@ -1,0 +1,229 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+@font-face {
+  font-family: 'GongGothicMedium';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-10@1.0/GongGothicMedium.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+html {
+  font-family: "GongGothicMedium", "Poppins", sans-serif;
+}
+
+
+/* 노말 */
+body, ul, li {
+  margin:0;
+  padding:0;
+  list-style:none;
+}
+
+a {
+  color:inherit;
+  text-decoration:none;
+}
+
+/* 라이브러리 */
+.inline-grid {
+  font-size:0;
+}
+
+.inline-grid > * {
+  font-size:1rem;
+  display:inline-block;
+  box-sizing:border-box;
+  vertical-align:top;
+}
+
+.block {
+  display:block;
+}
+
+.con {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.img-box > img {
+  width: 100%;
+  display: block;
+}
+
+/* 커스텀 */
+
+.con{
+  width:1200px;
+}
+
+.top-bar {
+  background:linear-gradient(to right, #F3C000, #8A3DB6);
+  color:white;
+}
+
+
+.top-bar > .con > div:first-child {
+  width:240px;
+}
+
+.top-bar > .con > div:nth-child(2){
+  width:calc(100% - 240px - 582px);
+}
+
+.top-bar > .con > div:last-child{
+  width: 582px;
+  background-color:white;
+  color:brown;
+}
+
+.top-bar__logo {
+  /* font-weight:bold; */
+  font-size:1.5rem;
+  padding:10px;
+}
+
+
+.top-bar__menu-box > ul > li {
+  font-size:16px;
+  position:relative;
+}
+
+.top-bar__menu-box ul > li > a {
+  padding:15px 20px;
+  display:block;
+  /* transition: left 2s; */
+}
+
+/* 호버했을 때 a 밑에 선이 생기는 부분 */
+.top-bar__menu-box ul > li:hover > a > span{
+  transition: 0.1s;
+  border-bottom: 2px solid;
+  border-image: linear-gradient(to right, #F3C000, #8A3DB6);
+  border-image-slice: 1; 
+}
+
+
+.top-bar__menu-box > ul > li > ul {
+  display:none;
+  position:absolute;
+  width: 100%;
+  left: 0;
+  top: 100%;
+  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.5);
+  
+}
+
+.top-bar__menu-box > ul > li:hover > ul {
+  display:block;
+}
+  
+ /*탑바 끝  */
+
+/* section-0 */
+
+.section-0 {
+  margin-top:20px;
+}
+
+
+/* work-list-box 시작 */
+
+.work-list-box > ul {
+  margin-left:-10px;
+  margin-right:-10px;
+}
+
+.work-list-box > ul > li {
+  margin-top:20px;
+  width:33.3333%;
+  padding:0 10px;
+}
+
+
+.work-list-box > ul > li > div > .work-name {
+  margin-top: 5px;
+  font-weight: bold;
+  text-align: center;
+}
+
+
+.work-list-box > ul > li > div > .work-date {
+  margin-top: 5px;
+  text-align:center;
+  color: #565656;
+}
+
+.work-list-box > ul > li > div > .img-box {
+  position: relative;
+  overflow: hidden;
+}
+
+
+.work-list-box > ul > li:hover > div > .img-box > div {
+  background-color:rgba(0,0,0,0.5);
+}
+
+.work-list-box > ul > li > div > .img-box > img {
+  transition:transform 1s;
+  z-index:-1;
+  position: relative;
+}
+
+.work-list-box > ul > li:hover > div > .img-box > img {
+  transform: scale(1.4);
+}
+
+.work-list-box > ul > li > div > .img-box > .text-1 {
+  border:3px solid white;
+  color:white;
+  padding:10px;
+  border-radius:10px;
+  position:absolute;
+  top:50%;
+  left:35%;
+  transform:translateX(-50%) translateY(-50%);
+  font-weight:bold;
+  opacity:0;
+  transition: opacity 1s;
+}
+
+.work-list-box > ul > li > div > .img-box > .text-2 {
+  border:3px solid white;
+  color:white;
+  padding:10px;
+  border-radius:10px;
+  position:absolute;
+  top:50%;
+  right:5%;
+  transform:translateX(-50%) translateY(-50%);
+  font-weight:bold;
+  opacity:0;
+  transition: opacity 1s;
+}
+
+.work-list-box > ul > li:hover > div > .img-box > .text-1 {
+  opacity:1;
+  cursor: pointer;
+}
+
+.work-list-box > ul > li:hover > div > .img-box > .text-2 {
+  opacity:1;
+  cursor: pointer;
+}
+
+
+.work-list-box > ul > li > div > .img-box > .bg {
+  background-color: rgba(0,0,0,0);
+  position: absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  transition:background-color 1s;
+}
+
+
+.work-list-box > ul > li:hover > div > .img-box > .bg {
+background-color: rgba(0,0,0,0.7);
+}
+/* work-list-box 끝 */
